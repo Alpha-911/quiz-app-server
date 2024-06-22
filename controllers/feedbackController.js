@@ -17,18 +17,3 @@ exports.createFeedback = async (req, res) => {
         })
     }
 }
-exports.getFeedback = async (req, res) => {
-    try {
-        const fetchFeedback = await feedback.find();
-        res.status(201).json({
-            status: "success",
-            feedback: fetchFeedback
-        })
-    }
-    catch (err) {
-        res.status(400).json({
-            status: 'Failed',
-            message: err.message
-        })
-    }
-}
