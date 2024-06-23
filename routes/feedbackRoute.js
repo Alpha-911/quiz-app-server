@@ -5,7 +5,7 @@ const feedbackController = require('./../controllers/feedbackController')
 const router = express.Router();
 
 router
-.route('/')
+.route('/feedback')
     .post(jsonParser, feedbackController.createFeedback)
 
 module.exports = router;
